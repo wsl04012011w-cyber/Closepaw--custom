@@ -23,6 +23,9 @@ jobs:
           path: upstream
           persist-credentials: false
 
+      - name: Apply custom ChatGPT Free Codex model mapping
+        run: python scripts/patch_upstream_models.py
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
